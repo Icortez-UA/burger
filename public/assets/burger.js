@@ -5,15 +5,15 @@ $(function () {
         event.preventDefault();
 
         alert("you hit create")
-
+        var burgers_create = $("#inputForm").val().trim();
         var newBurger = {
 
-            burger_name: $("#inputForm").val().trim(),
+            burger_name: burgers_create,
 
             devoured: 0
 
         };
-
+        console.log(burgers_create);
 
 
         $.ajax("/api/burgers", {
